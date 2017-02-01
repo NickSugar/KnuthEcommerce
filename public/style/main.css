@@ -1,0 +1,13 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 15px;
+  background-image: url('http://placehold.it/400x200');
+}
+
+.selCon {
+  height: 50%;
+  width: auto;
+}
