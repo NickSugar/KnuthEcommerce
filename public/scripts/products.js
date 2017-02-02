@@ -4,9 +4,11 @@ $(document).ready(function () {
   .then(function(data) {
     console.log(data);
     generateItems(data);
+    setupClicks(data);
   }).catch(function(error) {
     console.log(error);
   })
+})
 
 function generateSection(object) {
   var counter = 1
@@ -23,23 +25,101 @@ function generateSection(object) {
     $("#blade"+counter).append($p1)
     var $p2 = $('<p>').text(object[prop]['Description'])
     $("#blade"+counter).append($p2)
+    var $costHide = $('<element>', {"style": "display: none"}).text(object[prop]['Price'])
+    $("#blade"+counter).append($costHide)
     var $but = $('<button>', {id: "but"+counter, "class": "addButton"}).text('ADD')
     $("#blade"+counter).append($but)
     counter++
   }
 }
 
-function generateImage() {
-
+function generateImage(object) {
+  counter = 1
+  for (var prop in object) {
+    var $img = $('<img>', {"class": "containerImage", "src": object[prop]['Image']})
+    $("#blade"+counter+" div").append($img)
+    counter++
+  }
 }
 
+
 function generateItems(object) {
+  $('main').empty()
   generateSection(object)
   generateImage(object)
 };
 
-
-
-function filterResults() {
-
+function setupClicks(products) {
+  $('#li1').on('click', function() {
+    var clone = Object.assign({}, products)
+    for (var name in products) {
+      if (clone[name]['Price'] >= 100) {
+        delete clone[name]
+      }
+    }
+    generateItems(clone)
+  });
+  $('#li4').on('click', function() {
+    var clone = Object.assign({}, products)
+    for (var name in products) {
+      if (clone[name]['Price'] <= 500) {
+        delete clone[name]
+      }
+    }
+    generateItems(clone)
+  });
+  $('#li2').on('click', function() {
+    var clone = Object.assign({}, products)
+    for (var name in products) {
+      if (clone[name]['Price'] <= 100 || clone[name]['Price'] > 250) {
+        delete clone[name]
+      }
+    }
+    generateItems(clone)
+  });
+  $('#li3').on('click', function() {
+    var clone = Object.assign({}, products)
+    for (var name in products) {
+      if (clone[name]['Price'] <= 250 || clone[name]['Price'] > 500) {
+        delete clone[name]
+      }
+    }
+    generateItems(clone)
+  });
+  $('#li5').on('click', function() {
+    var clone = Object.assign({}, products)
+    for (var name in products) {
+      if (clone[name]['Slayed'] >= 2) {
+        delete clone[name]
+      }
+    }
+    generateItems(clone)
+  });
+  $('#li8').on('click', function() {
+    var clone = Object.assign({}, products)
+    for (var name in products) {
+      if (clone[name]['Slayed'] <= 10) {
+        delete clone[name]
+      }
+    }
+    generateItems(clone)
+  });
+  $('#li6').on('click', function() {
+    var clone = Object.assign({}, products)
+    for (var name in products) {
+      if (clone[name]['Slayed'] <= 2 || clone[name]['Slayed'] > 5) {
+        delete clone[name]
+      }
+    }
+    generateItems(clone)
+  });
+  $('#li7').on('click', function() {
+    var clone = Object.assign({}, products)
+    for (var name in products) {
+      if (clone[name]['Slayed'] <= 5 || clone[name]['Slayed'] > 10) {
+        delete clone[name]
+      }
+    }
+    generateItems(clone)
+  });
 }
