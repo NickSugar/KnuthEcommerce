@@ -1,4 +1,13 @@
 $(document).ready(function () {
+
+  $.get('./products.json')
+  .then(function(data) {
+    console.log(data);
+    generateItems(data);
+  }).catch(function(error) {
+    console.log(error);
+  })
+
 //======================
 //Nick
 //======================
@@ -43,6 +52,7 @@ $(document).ready(function () {
     scrollLeft();
     scroll = setInterval(scrollRight, 4000);
   })
+
 
 //======================
 //Nate
@@ -105,7 +115,10 @@ var object = {
   },
 }
 
-function generateSection() {
+
+
+function generateSection(object) {
+
   var counter = 1
   for(var prop in object) {
     var $sec = $('<section>', {id: "blade"+counter, "class": "col-12 product container"});
@@ -116,16 +129,26 @@ function generateSection() {
     $("#blade"+counter).append($h2)
     var $h4 = $('<h4>').text('Cost: ' + object[prop]['Price'] + ' Rubys')
     $("#blade"+counter).append($h4)
+    var $p1 = $('<p>').text('Previous Weilders Rating: '+ object[prop]['Stars'])
+    $("#blade"+counter).append($p1)
+    var $p2 = $('<p>').text(object[prop]['Description'])
+    $("#blade"+counter).append($p2)
+    var $but = $('<button>', {id: "but"+counter, "class": "addButton"}).text('ADD')
+    $("#blade"+counter).append($but)
     counter++
   }
 }
 
+function generateImage() {
 
-function generateItems() {
-  generateSection()
-};
+}
 
-generateItems();
+function generateItems(object) {
+  generateSection(object)
+  generateImage(object)
+}
+
+
 
 function filterResults() {
 
@@ -170,23 +193,28 @@ validator will need to run when client hits the copy button, and
 
 
 $('#purchase').on('click', function() {
-  console.log( $("#First-Name-Shipping1").val()
-);
+
   formValidation();
 });
 
-var firstName = $("#First-Name-Shipping1").val()
-
-console.log(firstName);
-
-
-
 function formValidation() {
-    if( $('#First-Name-Shipping1').val() === 'undefined') {
+    if ( $('#First-Name-Shipping1').val() === '') {
+    /*this will need to change...maybe have a counter variable and then display a batch message if there's more than one field blank? build out validator first!*/
       console.log("need info");
     }
-    else {
+    else if( $('#Last-Name-Shipping1').val() === '') {
+    console.log("need info");
+    }
+    else if( $('#Address-Line-1-Shipping1').val() === '') {
+    console.log("need info");
+    }
+    /* state validation here! */
+    else if( $('#Zip-Shipping1').val() === '') {
+     console.log("need info");
+    }
+    else{
       console.log("entered info");
+      console.log( $("#Address-Line-Shipping1").val());
     }
 }
 })
