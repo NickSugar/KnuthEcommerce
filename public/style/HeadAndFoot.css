@@ -1,3 +1,39 @@
+/***************** Header *****************/
+
+.navbar{
+    background-image: none;
+}
+
+.navbar-default {
+  background-color: #182c39;
+  background-image: none;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+.navbar-default .navbar-nav > .active > a {
+  color: white;
+  background-color: black;
+}
+
+.navbar-nav > .open > a {
+  background-color: black;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+
+
+/***************** Footer *****************/
+
 #myFooter {
     background-color: #182c39;
     color: white;
@@ -12,7 +48,11 @@
 }
 
 #myFooter .row {
-    /*margin: 0 85px;*/
+    margin: 0 85px;
+}
+
+#myFooter .container {
+    width: auto;
 }
 
 #myFooter .footer-copyright {
@@ -27,8 +67,11 @@
     color: #ccc;
 }
 
-#myFooter .container {
-    width: auto;
+#myFooter .media-list {
+  height: 240px;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 #myFooter ul {
@@ -44,29 +87,17 @@
     margin-top: 30px;
 }
 
-#myFooter .footer-products {
-    font-size: 18px;
-    color: white;
-    font-weight: bold;
-    margin-top: 30px;
+#myFooter img {
+  float: left;
+  margin-right: 10%;
 }
 
-#myFooter h4 {
-    font-size: 18px;
-    color: white;
-    font-weight: bold;
-    margin-top: 30px;
-}
 
 #myFooter a {
     color: #d2d1d1;
     text-decoration: none;
 }
 
-#myFooter img {
-  float: left;
-  margin-right: 10%;
-}
 
 #myFooter a:hover,
 #myFooter a:focus {
@@ -132,25 +163,14 @@
 
 
 /* CSS used for positioning the footers at the bottom of the page. */
-/* You can remove this. */
 
-html{
-    height: 100%;
-}
 
-body{
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: column;
-    -webkit-flex-direction: column;
-    height: 100%;
-}
 
-.content{
+/*.content{
    flex: 1 0 auto;
    -webkit-flex: 1 0 auto;
    min-height: 200px;
-}
+}*/
 
 #myFooter{
    flex: 0 0 auto;
