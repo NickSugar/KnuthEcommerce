@@ -1,4 +1,4 @@
-var object = {
+{
   "Firesword": {
     "Price": 30,
     "Description": "A fine sword direct from the fiery bowels of Un'Goro.  Good for vanquishing Dragons ranging from green to blue magics",
@@ -52,5 +52,5 @@ var object = {
     "Maker": "Grenvel the Smith",
     "Id": 6,
     "Slayed": "N/A"
-  },
+  }
 }

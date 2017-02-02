@@ -1,4 +1,13 @@
 $(document).ready(function () {
+  
+  $.get('./products.json')
+  .then(function(data) {
+    console.log(data);
+    generateItems(data);
+  }).catch(function(error) {
+    console.log(error);
+  })
+  
 //======================
 //Nick
 //======================
@@ -36,68 +45,12 @@ $(document).ready(function () {
     scroll = setInterval(carouselRight, 5000);
   })
 
+  
 //======================
 //Nate
 //======================
   
-var object = {
-  "Firesword": {
-    'Price': 30,
-    "Description": "A fine sword direct from the fiery bowels of Un'Goro.  Good for vanquishing Dragons ranging from green to blue magics",
-    "Image" : "",
-    "Stars" : 3.5,
-    "Maker" : "Yvalo D'gnon",
-    "Id" : 1,
-    "Slayed" : "Youmenel (Green), Ioklax (Blue)"
-  },
-  "Glory's Edge": {
-    'Price': 190,
-    "Description": "Forged with both 'Heaven's Light' and 'Angel Fur', this tried and true blade will cleave in twain any black dragon you may stumble upon.",
-    "Image" : "",
-    "Stars" : 4,
-    "Maker" : "Kol-Nor the Proud; Glad usurper of crowns, Trampler of fields, and Master of locks.",
-    "Id": 2,
-    "Slayed": "Zyz'zemez (Black), Oliapin (Silver), Alipin (Gold)"
-  },
-  "Hammer of Machesney": {
-    "Price": 460,
-    "Description": "A brute force bludgeon with the power to lay fallow fertile fields of whelplings.  Best if used after storing in a cave of mysteries for 4-10 eons.",
-    "Image": "",
-    "Stars": 3,
-    "Maker": "Pzb VII, Seventh Johan of this age, Forge of Souls, Keeper of Fire",
-    "Id" : 3,
-    "Slayed": "The Crimson Rookery (Red;Nest)"
-  },
-  "Copper Sword": {
-    "Price": 10,
-    "Description": "A hearty begginers blade for practice in slaysmanship.  Not recomended for any dragons over the age of 1 yr.  Crafted by SwordsNBlades in Lower Nythernia, every neophyte needs thier first sword.  This one wil do.",
-    "Image": "",
-    "Stars": 1.5,
-    "Maker": "Sword Xpeller 2000",
-    "Id": 4,
-    "Slayed": "N/A"
-  },
-  "S'Gornuu, Spellblade of the Azure Order" : {
-    "Price": 1200,
-    "Description": "This limited time offer is bound to expire with the sale of this legendary blade.  THE S'Gornuu of legend has recently come to market thanks to the mysterious death of it's previous owner, U'wath of Ionika.  For the low price of 1200 Rubies, you can not only fell any dragon you're likely to see, but wield the entire library of magic of the Ionikan plains.",
-    "Image": "",
-    "Stars": 5,
-    "Maker": "Z'xytmytryx the All-seeing, Sky-prince of Utan",
-    "Id": 5,
-    "Slayed": "Countless numbers through all manifestations of time and place.  Est. 2000+"
-  },
-  "Iron Reaver": {
-    "Price": 300,
-    "Description": "A blade for the slayer on a budget.  With this sturdy edge, any man can kill wyvern's like a heralded 'Knight of the 6 Crowns'.  Great for nuisance dragons that are terrorizing crops, livestock, or the landed gentry.",
-    "Image": "",
-    "Stars": 3,
-    "Maker": "Grenvel the Smith",
-    "Id": 6,
-    "Slayed": "N/A"
-  },
-}
-
-function generateSection() {
+function generateSection(object) {
   var counter = 1
   for(var prop in object) {
     var $sec = $('<section>', {id: "blade"+counter, "class": "col-12 product container"});
@@ -108,16 +61,26 @@ function generateSection() {
     $("#blade"+counter).append($h2)
     var $h4 = $('<h4>').text('Cost: ' + object[prop]['Price'] + ' Rubys')
     $("#blade"+counter).append($h4)
+    var $p1 = $('<p>').text('Previous Weilders Rating: '+ object[prop]['Stars'])
+    $("#blade"+counter).append($p1)
+    var $p2 = $('<p>').text(object[prop]['Description'])
+    $("#blade"+counter).append($p2)
+    var $but = $('<button>', {id: "but"+counter, "class": "addButton"}).text('ADD')
+    $("#blade"+counter).append($but)
     counter++
   }
 }
 
+function generateImage() {
 
-function generateItems() {
-  generateSection()
+}
+
+function generateItems(object) {
+  generateSection(object)
+  generateImage(object)
 };
 
-generateItems();
+
 
 function filterResults() {
 
