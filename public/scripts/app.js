@@ -17,4 +17,5 @@ $('#submit-email').on('click', function() {
   )
 
 });
-})
+});
+

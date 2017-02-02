@@ -1,44 +1,64 @@
 $(document).ready(function () {
-
   $.get('./products.json')
   .then(function(data) {
-    console.log(data);
-    generateItems(data);
+    var datas = data
+    datas.goldSword = {}
+    console.log(datas);
+    var dataKeyArray = Object.keys(data)
+
+    function getImageURLs(key) {
+      return data[key]['Image']
+    }
+    var productImages = dataKeyArray.map(getImageURLs)
+    console.log(productImages);
+    initializeCarousel(productImages)
   }).catch(function(error) {
     console.log(error);
   })
+})
 
-  var productImages = [
-    "http://placehold.it/400x400",
-    "http://placehold.it/401x400",
-    "http://placehold.it/402x400",
-    "http://placehold.it/403x400",
-    "http://placehold.it/404x400",
-    "http://placehold.it/405x400"
-  ]
+function setIntervalRight(productImages) {
+  return setInterval(function () {
+    carouselRight(productImages)
+  }, 5000)
+}
+
+function carouselRight (productImages) {
+  var firstImage = productImages.shift()
+  productImages.push(firstImage)
+  $('.carousel').attr('src', productImages[0])
+}
+
+function carouselLeft (productImages) {
+  var firstImage = productImages.pop()
+  productImages.unshift(firstImage)
+  $('.carousel').attr('src', productImages[0])
+}
+
+function initializeCarousel(productImages) {
 
   $('.carousel').attr('src', productImages[0])
-  var scroll = setInterval(carouselRight, 5000)
+  var scroll = setIntervalRight(productImages)
 
-  function carouselRight () {
-    var firstImage = productImages.shift()
-    productImages.push(firstImage)
-    $('.carousel').attr('src', productImages[0])
-  }
-  $('.rightCarousel').on('click', function(){
+
+  $('.carousel, .leftBtn, .rightBtn').hover(
+      function () {
+        clearInterval(scroll);
+      },
+      function () {
+        scroll = setIntervalRight(productImages)
+  });
+
+
+  $('.rightBtn').on('click', function(){
     clearInterval(scroll);
-    carouselRight();
-    scroll = setInterval(carouselRight, 5000);
+    carouselRight(productImages);
+    scroll = setIntervalRight(productImages)
   })
 
-  function carouselLeft () {
-    var firstImage = productImages.pop()
-    productImages.unshift(firstImage)
-    $('.carousel').attr('src', productImages[0])
-  }
-  $('.leftCarousel').on('click', function () {
+  $('.leftBtn').on('click', function () {
     clearInterval(scroll);
-    carouselLeft();
-    scroll = setInterval(carouselRight, 5000);
+    carouselLeft(productImages);
+    scroll = setIntervalRight(productImages)
   })
 }
