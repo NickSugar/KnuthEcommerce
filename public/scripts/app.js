@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $(document).ready(function () {
 //======================
 //Nick
@@ -183,3 +184,6 @@ function formValidation() {
 }
 })
 
+=======
+var getImport = document.querySelector('#template-file');
+>>>>>>> 3df4dfacdb62dc1f5fdf88dbc2616b5e67c5dc92
