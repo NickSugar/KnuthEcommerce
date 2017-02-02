@@ -33,26 +33,27 @@ validator will need to run when client hits the copy button, and
 
 
 $('#purchase').on('click', function() {
-  console.log( $("#First-Name-Shipping1").val()
-);
+
   formValidation();
 });
 
-var firstName = $("#First-Name-Shipping1").val()
-
-console.log(firstName);
-
-
-
 function formValidation() {
-    if( $('#First-Name-Shipping1').val() === 'undefined') {
+    if ( $('#First-Name-Shipping1').val() === '') {
+    /*this will need to change...maybe have a counter variable and then display a batch message if there's more than one field blank? build out validator first!*/
       console.log("need info");
     }
-    else {
-      console.log("entered info");
+    else if( $('#Last-Name-Shipping1').val() === '') {
+    console.log("need info");
     }
-
-
-
-
+    else if( $('#Address-Line-1-Shipping1').val() === '') {
+    console.log("need info");
+    }
+    /* state validation here! */
+    else if( $('#Zip-Shipping1').val() === '') {
+     console.log("need info");
+    }
+    else{
+      console.log("entered info");
+      console.log( $("#Address-Line-Shipping1").val());
+    }
 }
