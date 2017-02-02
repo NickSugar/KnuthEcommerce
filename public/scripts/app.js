@@ -3,43 +3,51 @@ $(document).ready(function () {
 //Nick
 //======================
   var productImages = [
-    "http://placehold.it/400x400",
-    "http://placehold.it/401x400",
-    "http://placehold.it/402x400",
-    "http://placehold.it/403x400",
-    "http://placehold.it/404x400",
-    "http://placehold.it/405x400"
+    "./Images/blade1.png",
+    "./Images/blade2.jpg",
+    "./Images/blade3.jpg",
+    "./Images/blade4.jpg",
+    "./Images/blade5.png",
+    "./Images/blade6.png"
   ]
 
   $('.carousel').attr('src', productImages[0])
-  var scroll = setInterval(carouselRight, 5000)
 
-  function carouselRight () {
+  var scroll = setInterval(scrollRight, 4000)
+  $('.carousel, leftBtn, rightBtn').hover(
+    function () {
+      clearInterval(scroll);
+    },
+    function () {
+     scroll = setInterval(scrollRight, 4000);
+  });
+
+  function scrollRight () {
     var firstImage = productImages.shift()
     productImages.push(firstImage)
     $('.carousel').attr('src', productImages[0])
   }
-  $('.rightCarousel').on('click', function(){
+  $('.rightBtn').on('click', function(){
     clearInterval(scroll);
-    carouselRight();
-    scroll = setInterval(carouselRight, 5000);
+    scrollRight();
+    scroll = setInterval(scrollRight, 4000);
   })
 
-  function carouselLeft () {
+  function scrollLeft () {
     var firstImage = productImages.pop()
     productImages.unshift(firstImage)
     $('.carousel').attr('src', productImages[0])
   }
-  $('.leftCarousel').on('click', function () {
+  $('.leftBtn').on('click', function () {
     clearInterval(scroll);
-    carouselLeft();
-    scroll = setInterval(carouselRight, 5000);
+    scrollLeft();
+    scroll = setInterval(scrollRight, 4000);
   })
 
 //======================
 //Nate
 //======================
-  
+
 var object = {
   "Firesword": {
     'Price': 30,
@@ -122,7 +130,7 @@ generateItems();
 function filterResults() {
 
 }
-  
+
 //======================
 //Paul
 //======================
@@ -149,8 +157,8 @@ $('#submit-email').on('click', function() {
 
 });
 
-  
-  
+
+
 /* here's where we start with the form validator JS!
 1- thinking it makes sense to have two separate forms,
 
@@ -182,4 +190,3 @@ function formValidation() {
     }
 }
 })
-

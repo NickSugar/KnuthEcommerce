@@ -5,9 +5,15 @@
 }
 
 .carousel {
+  position: relative;
   height: 300px;
   width: 600px;
   border-radius: 15px;
+}
+.leftCarousel,
+.rightCarousel {
+  position: relative;
+
 }
 
 
