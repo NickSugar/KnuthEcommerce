@@ -34,6 +34,7 @@ $(document).ready(function () {
     scroll = setInterval(carouselRight, 5000);
   })
 
+  
 var object = {
   "Firesword": {
     'Price': 30,
@@ -116,4 +117,5 @@ generateItems();
 function filterResults() {
 
 }
+
 })
