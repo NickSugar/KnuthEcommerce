@@ -1,0 +1,14 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/local/Cellar/node/7.4.0/bin/node /usr/local/bin/firebase serve
+[debug] CLI Version:  3.2.1
+[debug] Platform:     darwin
+[debug] Node Version: v7.4.0
+[debug] Time:         Thu Feb 02 2017 11:41:03 GMT-0700 (MST)
+[debug] ----------------------------------------------------------------------
+[debug]
+[info] Starting Firebase development server...
+[info]
+[info] Project Directory: /Users/nathanedlen/playground/Projects/KnuthEcommerce
+[info] Public Directory: public
+[info]
+[info] Server listening at: http://localhost:5000
