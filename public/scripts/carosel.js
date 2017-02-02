@@ -8,14 +8,7 @@ $(document).ready(function () {
     console.log(error);
   })
 
-  var productImages = [
-    "http://placehold.it/400x400",
-    "http://placehold.it/401x400",
-    "http://placehold.it/402x400",
-    "http://placehold.it/403x400",
-    "http://placehold.it/404x400",
-    "http://placehold.it/405x400"
-  ]
+//la;skjdf;lkajsdf
 
   $('.carousel').attr('src', productImages[0])
   var scroll = setInterval(carouselRight, 5000)
