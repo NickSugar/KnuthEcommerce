@@ -1,13 +1,11 @@
-.carousel {
+.flexCon {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
-  border-radius: 15px;
-  background-image: url('http://placehold.it/400x200');
+  justify-content: space-around;
 }
 
-.selCon {
-  height: 50%;
-  width: auto;
+.carousel {
+  height: 300px;
+  width: 600px;
+  border-radius: 15px;
 }
