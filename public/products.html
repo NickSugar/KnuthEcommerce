@@ -7,13 +7,46 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" href="./style/main.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.js">
+
+    </script>
 
     <title>Unit 1 Project - eCommerce Site</title>
 
   </head>
 
   <body>
-
+    <header class="page-header container-fluid">
+      <h2>Swords of Legend</h2>
+      <ul style="list-style-type: none" class="container-fluid liInline">
+        Price
+        <a href="#"><li class="productli">0-100 Rubys</li></a>
+        <a href="#"><li class="productli">100-250 Rubys</li></a>
+        <a href="#"><li class="productli">250-500 Rubys</li></a>
+        <a href="#"><li class="productli">500+ Rubys</li></a>
+      </ul>
+      <ul style="list-style-type: none" class="container-fluid liInline">
+        Number of Dragons Slayed
+        <a href="#"><li class="productli">0-2</li></a>
+        <a href="#"><li class="productli">2-4</li></a>
+        <a href="#"><li class="productli">4-10</li></a>
+        <a href="#"><li class="productli">10+</li></a>
+      </ul>
+    </header>
+    <main class="container-fluid row mainheight">
+      <section class="col-12 product container">
+        <div class="productImage">
+          <img class="containerImage"src="./images/spell.jpg" alt="test">
+        </div>
+        <h2>Product</h2>
+        <h4>Cost</h4>
+        <p>Previous Weilders Rating</p>
+        <p>
+          This limited time offer is bound to expire with the sale of this legendary blade.  THE S'Gornuu of legend has recently come to market thanks to the mysterious death of it's previous owner, U'wath of Ionika.  For the low price of 1200 Rubies, you can not only fell any dragon you're likely to see, but wield the entire library of magic of the Ionikan plains.
+        </p>
+        <button type="button" name="Add to Cart" class="addButton">ADD</button>
+      </section>
+    </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="./scripts/app.js"></script>
