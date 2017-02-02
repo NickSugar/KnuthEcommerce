@@ -11,8 +11,8 @@
   width: 600px;
   border-radius: 15px;
 }
-.leftCarousel,
-.rightCarousel {
+.leftBtn,
+.rightBtn {
   position: relative;
 
 }
