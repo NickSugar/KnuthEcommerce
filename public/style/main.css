@@ -1,0 +1,11 @@
+.flexCon {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.carousel {
+  height: 300px;
+  width: 600px;
+  border-radius: 15px;
+}
