@@ -52,5 +52,41 @@
     "Maker": "Grenvel the Smith",
     "Id": 6,
     "Slayed": 0
+  },
+  "Ghost Blade": {
+    "Price": 780,
+    "Description": "Great for killing that pesky undead serpent, this Ghost Blade will cleave any haunts that you may encounter.  Forged from the tortured souls of the Ym'Inin plains people, this wicked edge is sure to please",
+    "Image": "./Images/blade7.png",
+    "Stars": 4.5,
+    "Maker": "Hyvyxryl the Soul Forger",
+    "Id": 7,
+    "Slayed": 6
+  },
+  "Brutality": {
+    "Price": 1345,
+    "Description": "If killing dragons isn't your whole focus and you enjoy moonlighting with some light maurauding, then this is your sword.  Numbers uncountable have been hewn by this ancient Viking tormentor.  Spawned from the enchanted waters of the holy Lake of Maidens it has been since turned to a black blade dripping with the blood of inocents.  If you fancy yourself and evil butcher of thousands, look no further.",
+    "Image": "./Images/blade8.png",
+    "Stars": 3,
+    "Maker": "Lady of the Lake, Gyldrana",
+    "Id": 8,
+    "Slayed": 2
+  },
+  "Shadow Dirk": {
+    "Price": 80,
+    "Description": "A begginers short-sword with light shadow magics.  Created by the College of Smiths in lower Tananbrul, great for novice questing and poking holes in red whelplings.",
+    "Image": "./Images/blade9.png",
+    "Stars": 2,
+    "Maker": "Jonas Hirngard: Grade 9",
+    "Id": 9,
+    "Slayed": 0
+  },
+  "Vyrka, Wyrmreaver of the God-Kings": {
+    "Price": 4500,
+    "Description": "What can be said that hasn't been spun legend sung by bards near and far.  This legendary ancient blade is now for sale right here at 'Swords of Legend'.  Complete with it's magical scabbard, for just 4500 Rubys you can inbue your being with the immortal soul of the ancient God-King Metzopolnian the Suneater.  There won't be a dragon past or present that will escape your terrible visage with it's life. Totally worth the price.",
+    "Image": "./Images/blade10.png",
+    "Stars": 4.5,
+    "Maker": "Unknown",
+    "Id": 10,
+    "Slayed": 10000
   }
 }
