@@ -22,86 +22,113 @@ console.log(this.selectedIndex);
 
 $('#purchase').on('click', function() {
 
-
-
-
-    // if ( !ShippingValidation()) {
-    // alert("please complete your shipping info")
-    // }
- //  else if (!BillingValidation()) //build this out!
- //
-  // else
-  if(!cCValidation()) {
-    alert('Please review your payment information')
-  } //build this out!
-
+    if ( !shippingValidation()) {
+      return alert("please complete your shipping info")
+    }
+    else if (!billingValidation()) {
+      return alert("please complete your billing info")
+    }
+    else if(!cCValidation()) {
+     return alert('Please review your payment information')
+    }
     else {
       alert('thank you for your purchase!')
- }
+    }
 
 });
 
-
-
-function ShippingValidation() {
-  // instead of console logs or a bunch of alerts, create a variable, increment it, at end of function, log an alert of form complete if = 0 or form incomplete if greater than 0!
-
+function shippingValidation() {
   $("#State-Shipping-1").on('change', function() {
   console.log(this.selectedIndex);
   });
-  if ( $('#First-Name-Shipping1').val() === '') {
-    /*this will need to change...maybe have a counter variable and then display a batch message if there's more than one field blank? build out validator first!*/
-      return false;
+    if ( $('#First-Name-Shipping1').val() === '') {
+    return false;
     }
     else if( $('#Last-Name-Shipping1').val() === '') {
-     return false;
+    return false;
     }
     else if( $('#Address-Line-1-Shipping1').val() === '') {
+    return false;
+    }
+    else if($('#City-Shipping').val() === '') {
     return false;
     }
     else if( $("#State-Shipping-1").attr('selectedIndex') > 0) {
     return false;
     }
-    //so close!
     else if ( $('#Zip-Shipping1').val().length < 5 || $('#Zip-Shipping1').val().length > 9) {
     return false;
     }
-//console.log('it passes!');
+
 return true;
-    //scracth the counter idea, return false if any condition met, then in else,
+
 }
 
 //onchange to run check, then fill out
 
+$(".checkbox").on('click', function() {
 
-function cCValidation () {
-   if (!$('#Credit-Card1').val().length === 16) {
-     return false;
+  if ( !shippingValidation()) {
+    return alert("please complete your shipping info before copying info over into billing")
+  }
+  else {
+  copyToBilling()
+  }
+
+
+});
+
+function copyToBilling() {
+   $('#First-Name-Billing1').val($('#First-Name-Shipping1').val());
+   $('#Last-Name-Billing1').val($('#Last-Name-Shipping1').val());
+   $('#Company-Name-Billing1').val($('#Company-Name-Shipping1').val());
+   $('#Address-Line-1-Billing1').val($('#Address-Line-1-Shipping1').val());
+   $('Address-Line-2-Billing1').val($('Address-Line-2-Shipping1').val());
+   $('#City-Billing').val($('#City-Shipping').val());
+   $("#State-Billing-1").val($("#State-Shipping-1").val());
+   $('#Zip-Billing1').val($('#Zip-Shipping1').val());
+
+// 1 this is the winning formula! $('#field2').val($('#field1').val());
+// 2 take a look at recs- it looks like shipping should just overwrite anything in billing?
+}
+
+function billingValidation() {
+  $("#State-Billing-1").on('change', function() {
+  console.log(this.selectedIndex);
+  });
+    if ( $('#First-Name-Billing1').val() === '') {
+    return false;
     }
-    else if ( )
+    else if( $('#Last-Name-Billing1').val() === '') {
+    return false;
+    }
+    else if( $('#Address-Line-1-Billing1').val() === '') {
+    return false;
+    }
+    else if($('#City-Billing').val() === '') {
+    return false;
+    }
+    else if( $("#State-Billing-1").attr('selectedIndex') > 0) {
+    return false;
+    }
+    else if ( $('#Zip-Billing1').val().length < 5 || $('#Zip-Billing1').val().length > 9) {
+    return false;
+    }
 
-   return true;
+return true;
 
 }
 
+function cCValidation() {
+    if (!$('#Credit-Card1').val().length === 16) {
+     return false;
+    }
+    else if ($('#Expiration1').val() === '') {
+     return false;
+    }
+    else if ($('#CVC').val() === '') {
+     return false;
+    }
+    return true;
 
-
-
-
-// $('#Zip-Shipping1').val().length >= 5 && $('#Zip-Shipping1').val().length <= 9 )
-
-
-// function formValidation() {
-//     if( $('#First-Name-Shipping1').val() === 'undefined') {
-//       console.log("need info");
-//     }
-//     else {
-//       console.log("entered info");
-//     }
-// }
-// })
-//
-// $('#purchase').on('click', function() {
-//
-//   formValidation();
-// });
+}
