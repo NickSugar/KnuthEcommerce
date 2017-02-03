@@ -1,16 +1,12 @@
 $(document).ready(function () {
   $.get('./products.json')
   .then(function(data) {
-    var datas = data
-    datas.goldSword = {}
-    console.log(datas);
     var dataKeyArray = Object.keys(data)
 
     function getImageURLs(key) {
       return data[key]['Image']
     }
     var productImages = dataKeyArray.map(getImageURLs)
-    console.log(productImages);
     initializeCarousel(productImages)
   }).catch(function(error) {
     console.log(error);
