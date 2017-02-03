@@ -2,4 +2,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  height: 250px;
+  background-color: gray;
+}
+
+#email-input {
+  width: 600px;
 }
