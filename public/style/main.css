@@ -21,6 +21,14 @@
 #thumb-container {
   margin-top: 10px;
 }
+.leftImgHome,
+.midImgHome,
+.rightImgHome
+ {
+   height: 300px !important;
+   width: 300px;
+   object-fit: scale-down;
+}
 
 h1 {
 	font-family: MedievalSharp;
@@ -29,6 +37,14 @@ h1 {
 	font-variant: normal;
 	font-weight: 500;
 	line-height: 26.4px;
+}
+h2 {
+	font-family: MedievalSharp;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 20.4px;
 }
 h3 {
 	font-family: MedievalSharp;
