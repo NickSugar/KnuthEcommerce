@@ -1,0 +1,26 @@
+.flexEmailForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 250px;
+  background-color: gray;
+}
+.emailInputSubmit {
+    width: 100%;
+}
+.signUp {
+  margin-bottom: 30px;
+}
+.signUpInfo {
+  margin: 0 50px 30px 50px;
+}
+
+#email-input {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#submit-email {
+  display: inline-block;
+}
