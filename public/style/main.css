@@ -21,6 +21,14 @@
 #thumb-container {
   margin-top: 10px;
 }
+.leftImgHome,
+.midImgHome,
+.rightImgHome
+ {
+   height: 300px !important;
+   width: 300px;
+   object-fit: scale-down;
+}
 
 h1 {
 	font-family: MedievalSharp;

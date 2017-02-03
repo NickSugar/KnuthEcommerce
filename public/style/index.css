@@ -6,6 +6,9 @@
   height: 250px;
   background-color: gray;
 }
+.emailInputSubmit {
+    width: 100%;
+}
 .signUp {
   margin-bottom: 30px;
 }
@@ -14,9 +17,10 @@
 }
 
 #email-input {
-  width: 600px;
+  display: inline-block;
+  margin-right: 10px;
 }
 
 #submit-email {
-  width: 150px;
+  display: inline-block;
 }
