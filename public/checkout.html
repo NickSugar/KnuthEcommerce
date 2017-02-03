@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/checkout.css">
+    <link rel="stylesheet" href="./style/products.css">
     <link rel="stylesheet" href="./style/HeadAndFoot.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=MedievalSharp" />
@@ -18,8 +19,8 @@
 
   <body>
 
-<!-- Header -->
-    <nav class="navbar navbar-default" id="myHeader">
+    <!-- Header -->
+    <nav class="navbar navbar-default medieval header" id="myHeader">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -28,23 +29,22 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">MagicShop</a>
+          <a class="navbar-brand" href="#">Swords of Legend</a>
         </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse header" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+            <li><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
             <li><a href="products.html">Products</a></li>
-            <li><a href="checkout.html">Checkout</a></li>
+            <li class="active"><a href="checkout.html">Checkout</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
           <button class="btn btn-primary" type="button">
-            Shopping Cart  <span class="badge"> 4</span>
+            Shopping Cart  <span class="badge">0</span>
           </button>
           </ul>
         </div>
       </div>
     </nav><!-- Header End -->
-
 
     <section>
       <div class="row">
@@ -77,137 +77,56 @@
       </div>
     </section>
 
+     <header class="page-header headerCustom headerBackground container-fluid">
+       <h2 class="center title">Swords of Legend</h2>
+     </header>
 
-    <form class ="form-inline">
-      <h2>Shipping</h2>
-        <div class="form-group">
+
+
+
+<!-- <div class="row">
+  <div class="col-xs-2">
+    <input type="text" class="form-control" placeholder=".col-xs-2">
+  </div> -->
+
+
+    <form class="form">
+      <h4>Shipping</h4>
+        <div class="row">
+          <div class="col-md-4">
             <label for="First-Name">First Name</label>
-            <input type="First-Name-Shipping" class="form-control" id="First-Name-Shipping1">
+              <input type="First-Name-Shipping" class="form-control" id="First-Name-Shipping1">
           </div>
-
-          <div class="form-group">
+          <div class="col-md-4">
             <label for="Last-Name">Last Name</label>
             <input type="Last-Name-Shipping" class="form-control" id="Last-Name-Shipping1">
           </div>
 
-          <div class="form-group">
+          <div class="col-md-4">
             <label for="Company-Name">Company</label>
             <input type="Company-Name-Shipping" class="form-control" id="Company-Name-Shipping1">
           </div>
 
-          <div class="form-group">
+      </div>
+        <div class="row">
+          <div class="col-md-4">
             <label for="Address-Line-1">Address Line 1</label>
             <input type="text" class="form-control" id="Address-Line-1-Shipping1">
           </div>
-
-          <div class="form-group">
+          <div class="col-md-4">
             <label for="Address-Line-2">Address Line 2</label>
             <input type="text" class="form-control" id="Address-Line-2-Shipping1">
           </div>
-
-        <div class="form-group">
-          <label for="exampleSelect1">State</label>
-            <select class="form-control" id="State-Shipping-1">
-              <option id="default" value="0">-Choose a State-</option>
-              <option value="AL">Alabama</option>
-              <option value="AK">Alaska</option>
-              <option value="AZ">Arizona</option>
-              <option value="AR">Arkansas</option>
-              <option value="CA">California</option>
-              <option value="CO">Colorado</option>
-              <option value="CT">Connecticut</option>
-              <option value="DE">Delaware</option>
-              <option value="DC">District Of Columbia</option>
-              <option value="FL">Florida</option>
-              <option value="GA">Georgia</option>
-              <option value="HI">Hawaii</option>
-              <option value="ID">Idaho</option>
-              <option value="IL">Illinois</option>
-              <option value="IN">Indiana</option>
-              <option value="IA">Iowa</option>
-              <option value="KS">Kansas</option>
-              <option value="KY">Kentucky</option>
-              <option value="LA">Louisiana</option>
-              <option value="ME">Maine</option>
-              <option value="MD">Maryland</option>
-              <option value="MA">Massachusetts</option>
-              <option value="MI">Michigan</option>
-              <option value="MN">Minnesota</option>
-              <option value="MS">Mississippi</option>
-              <option value="MO">Missouri</option>
-              <option value="MT">Montana</option>
-              <option value="NE">Nebraska</option>
-              <option value="NV">Nevada</option>
-              <option value="NH">New Hampshire</option>
-              <option value="NJ">New Jersey</option>
-              <option value="NM">New Mexico</option>
-              <option value="NY">New York</option>
-              <option value="NC">North Carolina</option>
-              <option value="ND">North Dakota</option>
-              <option value="OH">Ohio</option>
-              <option value="OK">Oklahoma</option>
-              <option value="OR">Oregon</option>
-              <option value="PA">Pennsylvania</option>
-              <option value="RI">Rhode Island</option>
-              <option value="SC">South Carolina</option>
-              <option value="SD">South Dakota</option>
-              <option value="TN">Tennessee</option>
-              <option value="TX">Texas</option>
-              <option value="UT">Utah</option>
-              <option value="VT">Vermont</option>
-              <option value="VA">Virginia</option>
-              <option value="WA">Washington</option>
-              <option value="WV">West Virginia</option>
-              <option value="WI">Wisconsin</option>
-              <option value="WY">Wyoming</option>
-          </select>
-      </div>
-
-          <div class="form-group">
-            <label for="Zip">Zip</label>
-            <input type="Zip-Shipping" class="form-control" id="Zip-Shipping1">
+          <div class="col-md-4">
+            <label for="City-Shipping">City</label>
+            <input type="text" class="form-control" id="City-Shipping">
           </div>
-
-          <div class="checkbox">
-            <label>
-              <input type="checkbox">Copy Shipping to Billing?
-            </label>
-          </div>
-        </form>
-
-    <!-- here starts the Billing Form! -->
-
-        <form>
-          <h2>Billing</h2>
-          <form class ="form-inline">
-            <div class="form-group">
-              <label for="First-Name">First Name</label>
-              <input type="First-Name-Billing" class="form-control" id="First-Name-Billing1">
-            </div>
-
-            <div class="form-group">
-              <label for="Last-Name">Last Name</label>
-              <input type="Last-Name-Billing" class="form-control" id="Last-Name-Billing1">
-            </div>
-
-            <div class="form-group">
-              <label for="Company-Name">Company</label>
-              <input type="Company-Name-Billing" class="form-control" id="Company-Name-Billing1">
-                </div>
-
-            <div class="form-group">
-              <label for="Address-Line-1">Address Line 1</label>
-              <input type="Address-Line-1-Billing" class="form-control" id="Address-Line-1-Billing1">
-            </div>
-
-            <div class="form-group">
-              <label for="Address-Line-2">Address Line 2</label>
-              <input type="Address-Line-2-Billing" class="form-control" id="Address-Line-2-Billing1">
-            </div>
-            <div class="form-group">
-              <label for="exampleSelect1">State</label>
-              <select class="form-control" id="exampleSelect1">
-                <option value="default">-Choose a State-</option>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <label for="exampleSelect1">State</label>
+              <select class="form-control" id="State-Shipping-1">
+                <option id="default" value="0">-Choose a State-</option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
                 <option value="AZ">Arizona</option>
@@ -260,44 +179,149 @@
                 <option value="WI">Wisconsin</option>
                 <option value="WY">Wyoming</option>
               </select>
+          </div>
+          <div class="col-md-4">
+            <label for="Zip">Zip</label>
+            <input type="Zip-Shipping" class="form-control" id="Zip-Shipping1">
+          </div>
+          <div class="col-md-4">
+            <div class="checkbox" id="checkbox">
+              <label>
+                <input type="checkbox">Copy Shipping to Billing?
+              </label>
             </div>
+          </div>
+        </div>
+    </form>
 
-                <div class="form-group">
-                  <label for="Zip">Zip</label>
-                  <input type="Zip-Shipping" class="form-control" id="Zip-Billing1">
+    <!-- here starts the Billing Form! -->
 
-                </div>
-            </form>
-
-    <!-- Credit Card Info form starts here-->
-
-    <form class ="form-inline">
-      <div class="form-group">
-        <h2>Credit Card Information</h2>
-        <label for="Credit-Card-Number">Credit Card Number</label>
-        <input type="Credit-Card-Purchase" class="form-control" id="Credit-Card1" >
+  <form class="form">
+    <h4>Billing</h4>
+      <div class="row">
+        <div class="col-md-4">
+          <label for="First-Name">First Name</label>
+          <input type="First-Name-Billing" class="form-control" id="First-Name-Billing1">
+        </div>
+        <div class="col-md-4">
+          <label for="Last-Name">Last Name</label>
+          <input type="Last-Name-Billing" class="form-control" id="Last-Name-Billing1">
+        </div>
+        <div class="col-md-4">
+          <label for="Company-Name">Company</label>
+          <input type="Company-Name-Billing" class="form-control" id="Company-Name-Billing1">
+        </div>
       </div>
-      <div class="form-group">
-        <label for="Expiration">Expiration</label>
-        <input type="Expiration-Purchase" class="form-control" id="Expiration1" >
+      <div class="row">
+        <div class="col-md-4">
+          <label for="Address-Line-1">Address Line 1</label>
+          <input type="Address-Line-1-Billing" class="form-control" id="Address-Line-1-Billing1">
+        </div>
+        <div class="col-md-4">
+          <label for="Address-Line-2">Address Line 2</label>
+          <input type="Address-Line-2-Billing" class="form-control" id="Address-Line-2-Billing1">
+        </div>
+        <div class="col-md-4">
+          <label for="City-Billing">City</label>
+          <input type="text" class="form-control" id="City-Billing">
+        </div>
       </div>
-      <div class="form-group">
-        <label for="CVC">CVC</label>
-        <input type="CVC-Purchase" id="exampleInputFile">
-      </div>
-      <div class="form-group">
-        <button type="purchase" id="purchase">Purchase</button>
+      <div class="row">
+        <div class="col-md-4">
+          <label for="exampleSelect1">State</label>
+            <select class="form-control" id="State-Billing-1">
+              <option value="0">-Choose a State-</option>
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska</option>
+              <option value="AZ">Arizona</option>
+              <option value="AR">Arkansas</option>
+              <option value="CA">California</option>
+              <option value="CO">Colorado</option>
+              <option value="CT">Connecticut</option>
+              <option value="DE">Delaware</option>
+              <option value="DC">District Of Columbia</option>
+              <option value="FL">Florida</option>
+              <option value="GA">Georgia</option>
+              <option value="HI">Hawaii</option>
+              <option value="ID">Idaho</option>
+              <option value="IL">Illinois</option>
+              <option value="IN">Indiana</option>
+              <option value="IA">Iowa</option>
+              <option value="KS">Kansas</option>
+              <option value="KY">Kentucky</option>
+              <option value="LA">Louisiana</option>
+              <option value="ME">Maine</option>
+              <option value="MD">Maryland</option>
+              <option value="MA">Massachusetts</option>
+              <option value="MI">Michigan</option>
+              <option value="MN">Minnesota</option>
+              <option value="MS">Mississippi</option>
+              <option value="MO">Missouri</option>
+              <option value="MT">Montana</option>
+              <option value="NE">Nebraska</option>
+              <option value="NV">Nevada</option>
+              <option value="NH">New Hampshire</option>
+              <option value="NJ">New Jersey</option>
+              <option value="NM">New Mexico</option>
+              <option value="NY">New York</option>
+              <option value="NC">North Carolina</option>
+              <option value="ND">North Dakota</option>
+              <option value="OH">Ohio</option>
+              <option value="OK">Oklahoma</option>
+              <option value="OR">Oregon</option>
+              <option value="PA">Pennsylvania</option>
+              <option value="RI">Rhode Island</option>
+              <option value="SC">South Carolina</option>
+              <option value="SD">South Dakota</option>
+              <option value="TN">Tennessee</option>
+              <option value="TX">Texas</option>
+              <option value="UT">Utah</option>
+              <option value="VT">Vermont</option>
+              <option value="VA">Virginia</option>
+              <option value="WA">Washington</option>
+              <option value="WV">West Virginia</option>
+              <option value="WI">Wisconsin</option>
+              <option value="WY">Wyoming</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+          <label for="Zip">Zip</label>
+          <input type="Zip-Billing" class="form-control" id="Zip-Billing1">
+        </div>
+        <div class="col-md-4"></div>
       </div>
     </form>
 
+    <!-- Credit Card Info form starts here-->
+  <form class="form">
+    <h4>Credit Card Information</h4>
+    <div class="row">
+      <div class="col-md-4">
+        <label for="Credit-Card-Number">Credit Card Number</label>
+        <input type="Credit-Card-Purchase" class="form-control" id="Credit-Card1" >
+      </div>
+      <div class="col-md-2">
+        <label for="Expiration">Expiration</label>
+        <input type="Expiration-Purchase" class="form-control" id="Expiration1">
+      </div>
+      <div class="col-md-2">
+        <label for="CVC">CVC</label>
+        <input type="CVC-Purchase" class="form-control" id="CVC">
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <button type="purchase" class="btn btn-primary btn-lg" id="purchase">Purchase</button>
+      </div>
+    </div>
+  </form>
+
 
 <!-- Footer -->
-    <footer id="myFooter">
+    <footer class="medieval"id="myFooter">
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
-                  <iframe id="map-container" frameborder="0" style="border:0"
-                      src="https://www.google.com/maps/d/embed?mid=1Chhw1YcGgeN_0LY6plVqwY7yQP4" >
+                  <iframe id="map-container" src="https://www.google.com/maps/d/embed?mid=1Chhw1YcGgeN_0LY6plVqwY7yQP4" width="300" height="300"></iframe>
                   </iframe>
                 </div>
                 <div class="col-sm-4">

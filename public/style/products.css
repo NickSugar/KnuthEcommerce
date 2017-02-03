@@ -3,16 +3,32 @@ section {
   background-repeat: no-repeat;
   background-position: right top;
   background-size: cover;
+  height: 380px;
+}
+
+.headerBackground {
+  background-image: url("../Images/header.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: cover;
+  color: maroon;
 }
 
 .product {
-  height: 330px;
   margin-top: 5px;
   background-color: none;
   border-bottom-color: lightgrey;
   border-bottom-style: solid;
   border-bottom-width: 1px;
 }
+
+.center {
+  text-align: center;
+  font-size: 34pt;
+  font-family: MedievalSharp;
+  font-weight: 600;
+}
+
 .help {
   border-color: red;
   border-width: 2px;
@@ -23,7 +39,7 @@ section {
   overflow: auto;
 }
 .productImage {
-  height: 300px;
+  height: 360px;
   width: 500px;
   float: left;
   margin-top: 9px;
@@ -38,6 +54,7 @@ section {
   border-width: 2px;
   border-style: solid;
   background-color: white;
+
 }
 
 .productHeader {
@@ -58,19 +75,44 @@ section {
   display: inline-block;
   text-align: center;
   font-size: 16pt;
+  margin-left: 55px;
 }
 
 .productli {
   float: right;
-  margin: 0 15px 0 15px
-}
-.center {
-  text-align: center;
-  font-size: 40pt;
-  font-family: MedievalSharp;
-  font-weight: 600;
+  margin: 0 15px 0 15px;
+  text-decoration: none;
+  color: darkslategrey;
+  font-size: 14pt;
 }
 
 .medieval {
   font-family: MedievalSharp
+}
+
+.fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+.fill img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+
+.title {
+  color: maroon;
+  text-shadow: 5px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 46pt;
+}
+
+.headerCustom {
+  margin-top: -27px;
+  border-style: none;
+}
+.header {
+  background-color: black;
+  border-style: none;
 }
