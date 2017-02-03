@@ -25,13 +25,16 @@ $('#purchase').on('click', function() {
 
 
 
-    if ( !ShippingValidation()) {
-    alert("please complete your shipping info")
-    }
+    // if ( !ShippingValidation()) {
+    // alert("please complete your shipping info")
+    // }
  //  else if (!BillingValidation()) //build this out!
  //
- //  else if(!CCValidation()) //build this out!
- //
+  // else
+  if(!cCValidation()) {
+    alert('Please review your payment information')
+  } //build this out!
+
     else {
       alert('thank you for your purchase!')
  }
@@ -42,7 +45,6 @@ $('#purchase').on('click', function() {
 
 function ShippingValidation() {
   // instead of console logs or a bunch of alerts, create a variable, increment it, at end of function, log an alert of form complete if = 0 or form incomplete if greater than 0!
-  console.log($('#Zip-Shipping1').val().length);
 
   $("#State-Shipping-1").on('change', function() {
   console.log(this.selectedIndex);
@@ -65,14 +67,22 @@ function ShippingValidation() {
     return false;
     }
 //console.log('it passes!');
-return true
+return true;
     //scracth the counter idea, return false if any condition met, then in else,
 }
 
 //onchange to run check, then fill out
 
 
-function cCValidation () {}
+function cCValidation () {
+   if (!$('#Credit-Card1').val().length === 16) {
+     return false;
+    }
+    else if ( )
+
+   return true;
+
+}
 
 
 
