@@ -1,3 +1,6 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+/*Carousel*/
 
 .flexCon {
   display: flex;
@@ -29,6 +32,125 @@
    width: 300px;
    object-fit: scale-down;
 }
+
+
+
+/*********Star Rating*********/
+
+.rating-one {
+  border: none;
+  /*float: right;*/
+}
+
+.rating-one > input { display: none; }
+.rating-one > label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating-one > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rating-one > label {
+  color: #ddd;
+ float: right;
+}
+
+/*CSS to Highlight Stars on Hover*/
+
+.rating-one > input:checked ~ label, /* show gold star when clicked */
+.rating-one:not(:checked) > label:hover, /* hover current star */
+.rating-one:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating-one > input:checked + label:hover, /* hover current star when changing rating */
+.rating-one > input:checked ~ label:hover,
+.rating-one > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating-one > input:checked ~ label:hover ~ label { color: #FFED85;  }
+
+
+/************* Second Star *************/
+
+.rating-two {
+  border: none;
+  /*float: right;*/
+}
+
+.rating-two > input { display: none; }
+.rating-two > label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating-two > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rating-two > label {
+  color: #ddd;
+ float: right;
+}
+
+/*CSS to Highlight Stars on Hover*/
+
+.rating-two > input:checked ~ label, /* show gold star when clicked */
+.rating-two:not(:checked) > label:hover, /* hover current star */
+.rating-two:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating-two > input:checked + label:hover, /* hover current star when changing rating */
+.rating-two > input:checked ~ label:hover,
+.rating-two > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating-two > input:checked ~ label:hover ~ label { color: #FFED85;  }
+
+/************* Third Star *************/
+
+.rating-three {
+  border: none;
+  /*float: right;*/
+}
+
+.rating-three > input { display: none; }
+.rating-three > label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating-three > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rating-three > label {
+  color: #ddd;
+ float: right;
+}
+
+/*CSS to Highlight Stars on Hover*/
+
+.rating-three > input:checked ~ label, /* show gold star when clicked */
+.rating-three:not(:checked) > label:hover, /* hover current star */
+.rating-three:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating-three > input:checked + label:hover, /* hover current star when changing rating */
+.rating-three > input:checked ~ label:hover,
+.rating-three > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating-three > input:checked ~ label:hover ~ label { color: #FFED85;  }
+
+
+
+
+/********Font*********/
 
 h1 {
 	font-family: MedievalSharp;
