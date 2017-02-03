@@ -30,6 +30,14 @@ h1 {
 	font-weight: 500;
 	line-height: 26.4px;
 }
+h2 {
+	font-family: MedievalSharp;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 20.4px;
+}
 h3 {
 	font-family: MedievalSharp;
 	font-size: 14px;

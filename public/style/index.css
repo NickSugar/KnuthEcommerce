@@ -6,7 +6,17 @@
   height: 250px;
   background-color: gray;
 }
+.signUp {
+  margin-bottom: 30px;
+}
+.signUpInfo {
+  margin: 0 50px 30px 50px;
+}
 
 #email-input {
   width: 600px;
+}
+
+#submit-email {
+  width: 150px;
 }
